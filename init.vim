@@ -132,7 +132,7 @@ function! ShowCocWiki()
    setlocal colorcolumn=
    setlocal statusline=
    setlocal winwidth=30 " Adjust this to your preferred width
-   setlocal winheight=10 " Adjust this to your preferred height
+   setlocal winheight=5 " Adjust this to your preferred height
 
    " Set the file path for your wiki content within your Neovim config directory
    execute 'read $HOME/AppData/Local/nvim/wiki/coc.md'
