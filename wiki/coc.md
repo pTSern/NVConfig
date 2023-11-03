@@ -16,9 +16,9 @@
     - Others
         + [Normal] K : Show documentation in preview window. 
 
-        + [Normal] <L>rn : Symbol renaming.
-        + [Visual] <L>f : Formatting selected code.
-        + [Normal] <L>f : Formatting selected code.
+        + [Normal] `L`rn : Symbol renaming.
+        + [Visual] `L`f : Formatting selected code.
+        + [Normal] `L`f : Formatting selected code.
 
         + [Visual] <L>ca : Applying code actions to the selected code block.
         + [Normal] <L>ca : Applying code actions to the selected code block.
