@@ -32,7 +32,6 @@
         + [Normal] `<L>r` : Remap keys for selected code.
 
         + [Normal] `<L>cl` : Run the Code Lens action on the current line.
-        + [Normal] `<CTR>/` : Run the Code Lens action on the current line.
 
     - Map function and class text objects
         + [Visual] `<L>cif`
