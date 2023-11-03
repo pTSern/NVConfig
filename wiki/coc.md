@@ -16,7 +16,7 @@
     - Others
         + [Normal] K : Show documentation in preview window. 
 
-        + [Normal] `L`rn : Symbol renaming.
+        + [Normal] `<L>rn` : Symbol renaming.
         + [Visual] `L`f : Formatting selected code.
         + [Normal] `L`f : Formatting selected code.
 
