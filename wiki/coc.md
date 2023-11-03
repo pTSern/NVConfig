@@ -1,6 +1,5 @@
 # COC Wiki
-- How to get here
->>> Do: <L>?coc
+- How to get here: `<L>?coc`
 
 - Key Mapping
     - Navigate diagnostics
