@@ -3,17 +3,17 @@
 
 - Key Mapping
     - Navigate diagnostics
-        + [Normal] [g : Navigate previous dianostics.
-        + [Normal] ]g : Navigate next dianostics.
+        + [Normal] `[g` : Navigate previous dianostics.
+        + [Normal] `]g` : Navigate next dianostics.
 
     - GoTo code navigation
-        + [Normal] gd : Go to the definition.
-        + [Normal] gy : Go to the type definition.
-        + [Normal] gi : Go to the implementation.
-        + [Normal] gr : Go to the references.
+        + [Normal] `gd` : Go to the definition.
+        + [Normal] `gy` : Go to the type definition.
+        + [Normal] `gi` : Go to the implementation.
+        + [Normal] `gr` : Go to the references.
 
     - Others
-        + [Normal] K : Show documentation in preview window. 
+        + [Normal] `K`` : Show documentation in preview window. 
 
         + [Normal] `<L>rn` : Symbol renaming.
         + [Visual] `<L>f` : Formatting selected code.
