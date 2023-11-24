@@ -13,7 +13,7 @@
         + [Normal] `gr` : Go to the references.
 
     - Others
-        + [Normal] `K`` : Show documentation in preview window. 
+        + [Normal] `<L>k` : Show documentation in preview window. 
 
         + [Normal] `<L>rn` : Symbol renaming.
         + [Visual] `<L>f` : Formatting selected code.
