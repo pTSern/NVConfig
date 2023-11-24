@@ -1,7 +1,8 @@
 
 # General key binding
 --- 
-    | Noremap | [Leader]d | Quick delete a line|
+    | Mode | Key | Details|
+    |------|-----|--------|
     | Noremap | [Leader]d | Quick delete a line|
 ---
 
