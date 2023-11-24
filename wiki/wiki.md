@@ -13,7 +13,7 @@
 |          | `[Leader]vL`        | `v>$a`                                       | Shift text right, go to the end of line, switch to `Insert` mode       |
 |          | `[Leader]vH`        | `v<0i`                                       | Shift text left, go to the start of the  line, switch to `Insert` mode |
 |          | `ds`                | `bde`                                        | Delete a word wherever your curosr is                                  |
-|                                                                                                                                                        |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | File     | `[Leader]w`         | `:w[CR]`                                     | Save file                                                              |
 |          | `[Leader]W`         | `:wq[CR]`                                    | Save then quit the file                                                |
 |          | `[Leader]q`         | `:q[CR]`                                     | Quit the file                                                          |
