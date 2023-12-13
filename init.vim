@@ -17,8 +17,9 @@ filetype plugin indent on
 
 "//v Mapping arena.
 
-let mapleader = "\<Space>"
 
+
+let mapleader = "\<Space>"
 nnoremap <silent> <Leader>d :bd<CR>
 nnoremap <silent> <Leader>w :w<CR>
 nnoremap <silent> <Leader>W :wq<CR>
@@ -30,35 +31,66 @@ nnoremap <silent> <Leader><Tab> :bp<CR>
 nnoremap <silent> <Leader>h :noh<CR>
 nnoremap <silent> <Leader>tv :vs<CR><C-w><C-w>
 nnoremap <silent> <Leader>l :ls<CR>
-nnoremap <silent> <Leader>ww <C-w><C-w>
+nnoremap <silent> <Leader>ts <C-w><C-w>
+nnoremap <silent> <S-Tab> <C-w><C-w>
+nnoremap <silent> <Leader>tq <C-w><C-q>
 
 nnoremap <silent> <Leader><Leader>t :ter<CR>
 
-nnoremap <silent> ds bde
+nnoremap <silent> df lbde
 
 nnoremap <silent> <Leader>ve v$
 
+nnoremap <silent> ds bde
+nnoremap <silent> <Leader>vl v>
+nnoremap <silent> <Leader>vh v<
+nnoremap <silent> <Leader>vL v>$a
+nnoremap <silent> <Leader>vH v<$a
+
+nnoremap <silent> <Leader>sn *
+nnoremap <silent> <Leader>sN *:noh<CR>
+nnoremap <silent> <Leader>sp #
+nnoremap <silent> <Leader>sP #:noh<CR>
+
 vnoremap <Leader>e $
 
-
 inoremap jj <Esc>
-inoremap fff <Esc>ddVk<Plug>(coc-format-selected)o
+inoremap fff <Esc>kV2j<
 
 inoremap <silent> <C-Up> <ESC>cc<ESC>2kp2jdd2ki
 inoremap <silent> <C-Down> <ESC>cc<ESC>jp2kddji
 
 nnoremap <Leader>F ddVk<Plug>(coc-format-selected)o
-nnoremap <Leader>- bi_<ESC>ea_<ESC>
-nnoremap <Leader>_ Bi_<ESC>Ea_<ESC>
+nnoremap <Leader>- lbi_<ESC>ea_<ESC>
+nnoremap <Leader>[ lbi[<ESC>ea]<ESC>
+nnoremap <Leader>] lBi[<ESC>Ea]<ESC>
+nnoremap <Leader>_ lBi_<ESC>Ea_<ESC>
 nnoremap <Leader>o jI<CR><ESC>ka
+nnoremap <Leader><CR> :%s/\r//g<CR>
 
-nnoremap <silent> <C-Up> cc<ESC>2kp2jdd2k
+noremap <silent> <C-Up> cc<ESC>2kp2jdd2k
 nnoremap <silent> <C-Down> cc<ESC>jp2kddj
 
 nnoremap <silent> <C-k> cc<ESC>2kp2jdd2k
 nnoremap <silent> <C-j> cc<ESC>jp2kddj
 
+nnoremap <silent> <C-h> V<
+nnoremap <silent> <C-l> V>
+vnoremap <silent> <C-h> <
+vnoremap <silent> <C-l> >
 
+nnoremap <silent> <Leader>vy V"+y
+nnoremap <silent> <Leader>vp "+p
+nnoremap <silent> <Leader>Vp V"+pV"+y
+
+nnoremap <silent> <Leader>// i/**<CR>*/<ESC>0xko
+
+nnoremap <silent> <C-/> ^i//<ESC>
+vnoremap <silent> <C-/> ^<C-v>I//<ESC>
+
+nnoremap <silent> <leader>qtsc iexport<Space>class<Space>CLASS_NAME<CR>{<CR>}<ESC>2k$vb
+
+nnoremap <silent> <Leader>fn :enew<CR>
 
 "1
 "2
@@ -66,7 +98,7 @@ nnoremap <silent> <C-j> cc<ESC>jp2kddj
 "4
 "5
 
-" Add the following syntax highlighting related configuration to your ~/.config/nvim/init.vim file:
+" " Add the following syntax highlighting related configuration to your ~/.config/nvim/init.vim file:
 " The ^[ here is one character that you can type with control-v ESC.
 
 " if has('nvim')
@@ -130,12 +162,13 @@ call plug#begin('~/AppData/Local/nvim/plugged')
  Plug 'voldikss/vim-floaterm'			" Float terminal
 
 " Vim help
-
+" Plug 'numToStr/Comment.nvim'
+Plug 'lfv89/vim-interestingwords'
+Plug 'airblade/vim-gitgutter'
 " Enhance
 
 " END
 call plug#end()
-
 let nvim_settings_dir = '~\AppData\Local\nvim\settings\'
 execute 'source ' .nvim_settings_dir.'nerdtree.vim'
 execute 'source ' .nvim_settings_dir.'airline.vim'
@@ -143,6 +176,7 @@ execute 'source ' .nvim_settings_dir.'floatterm.vim'
 execute 'source ' .nvim_settings_dir.'coc.vim'
 execute 'source ' .nvim_settings_dir.'nerdcommenter.vim'
 execute 'source ' .nvim_settings_dir.'fzf.vim'
+execute 'source ' .nvim_settings_dir.'highlight.vim'
 
 " All functions
 function! ShowWiki(text)
@@ -191,6 +225,7 @@ nnoremap <leader>?coc   : call ShowWiki('coc')<CR><CR>
 nnoremap <leader>?fzf   : call ShowWiki('fzf')<CR><CR>
 nnoremap <leader>?cs    : call ShowWiki('cheatsheet')<CR><CR>
 nnoremap <leader>?wiki  : call ShowWiki('wiki')<CR><CR>
+nnoremap <leader>??     : map<CR>
 
 " -- Toggle Cursor Column -- "
 let g:cursor_column = 0
@@ -207,7 +242,7 @@ function! ToggleCursorColumn()
     endif
 endfunction
 
-nnoremap <silent><leader>hc :call ToggleCursorColumn()<CR>
+nnoremap <silent><leader>fc :call ToggleCursorColumn()<CR>
 
 " -- Toggle Cursor Column -- "
 let g:cursor_line = 0
@@ -224,7 +259,7 @@ function! ToggleCursorLine()
     endif
 endfunction
 
-nnoremap <silent><leader>hl :call ToggleCursorLine()<CR>
+nnoremap <silent><leader>fl :call ToggleCursorLine()<CR>
 " -- Toggle Wrap Mode -- "
 let g:wrap_mode = 0
 
@@ -240,6 +275,18 @@ function! ToggleWrapMode()
     endif
 endfunction
 
-nnoremap <silent><leader>hw :call ToggleWrapMode()<CR>
+nnoremap <silent><leader>fw :call ToggleWrapMode()<CR>
 
+function! SaveAsFile()
+    " Prompt the user for a file name
+    let file_name = input('Enter the file name: ', expand('%:p:h/') . expand('%:t'))
+
+    " Save the buffer with the specified file name
+    execute 'w ' . file_name
+
+    " Display a message indicating the file has been saved
+    echo 'File saved as: ' . file_name
+endfunction
+
+nnoremap <silent> <Leader>fs :call SaveAsFile()<CR>
 
